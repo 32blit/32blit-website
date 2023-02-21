@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <style type="text/css">
         body {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 20px;
             font-family: Roboto;
         }
@@ -21,14 +21,14 @@
         }
         header {
             display: grid;
-	        grid-template-columns: 1fr 2fr;
+	        grid-template-columns: 130px auto;
 	        grid-template-rows: auto;
             column-gap: 20px;
         }
-        h1 {
-            font-size:1.4em;
-            padding: 0.5em;
-            line-height: 1.8em;
+        header h1 {
+            font-size:22px;
+            padding: 10px;
+            line-height: 40px;
             background: #36b;
             color:#fff;
             display: inline;
@@ -41,48 +41,41 @@
             max-width: 100%;
             height: auto;
         }
+        header span {
+            max-width: 250px;
+        }
         section {
             display: grid;
             grid-template-rows: auto;
             column-gap: 20px;
-        }
-        @media only screen and (min-width: 900px) {
-            body {
-                margin: 20px auto;
-            }
-            header {
-	            grid-template-columns: 1fr 2fr 3fr;
-            }
-            section:nth-child(1) {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            section:nth-child(2) {
-                grid-template-columns: 2fr 1fr;
-            }
         }
         article {
             margin-top: 40px;
             background: #eee;
             padding-bottom: 10px;
         }
-        section:nth-child(1) article:nth-child(1) h2 {
-            background: #a35;
+        article img {
+            margin-top: -35px;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            image-rendering: crisp-edges;
         }
-        section:nth-child(1) article:nth-child(2) h2 {
-            background: #4d8;
-        }
-        section:nth-child(1) article:nth-child(3) h2 {
-            background: #639;
-        }
-        section:nth-child(2) article:nth-child(1) h2 {
-            background: #817;
-        }
-        section:nth-child(2) article:nth-child(2) h2 {
-            background: #9d5;
-        }
-        section:nth-child(2) article:nth-child(3) h2 {
-            background: #36b;
-        }
+        a, a:hover {color:#a35;}
+        a:visited {color:#639;}
+
+        .intro article:nth-child(1) h2 {background: #a35;}
+        .intro article:nth-child(2) h2 {background: #4d8;}
+        .intro article:nth-child(3) h2 {background: #639;}
+
+        .links article:nth-child(1) h2 {background: #817;}
+        .links article:nth-child(2) h2 {background: #9d5;}
+        .links article:nth-child(3) h2 {background: #36b;}
+
+        .games article:nth-child(1) h2 {background: #e94;}
+        .games article:nth-child(2) h2 {background: #2cb;}
+        .games article:nth-child(3) h2 {background: #c66;}
+
         h2 {
             display: inline-block;
             color: #fff;
@@ -98,6 +91,18 @@
             text-align: center;
             padding:20px 0;
         }
+
+        @media only screen and (min-width: 1000px) {
+            body {
+                margin: 20px auto;
+            }
+            section {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            section:nth-child(1) {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -108,7 +113,12 @@
         </span>
     </header>
     <main>
-        <section>
+        <section class="intro">
+            <article>
+                <h2>What is 32blit?</h2>
+                <p>32blit is a set of tools and software to help you build games for embedded devices.</p>
+                <p>It was originally developed for its namesake- the STM32-based 32blit console - and has since been ported to the Raspberry Pi Pico, including the <a href="https://shop.pimoroni.com/products/picosystem">Pimoroni PicoSystem</a>.</p>
+            </article>
             <article>
                 <h2>32blit SDK</h2>
                 <ul>
@@ -116,6 +126,8 @@
                     <li><a href="https://github.com/32blit/32blit-sdk/">Source @ GitHUb</a></li>
                 </ul>
             </article>
+        </section>
+        <section class="links">
             <article>
                 <h2>Documentation</h2>
                 <ul>
@@ -126,20 +138,34 @@
                 <h2>Games</h2>
                 <ul>
                     <li><a href="https://blithub.co.uk/">Blithub (for 32blit hardware)</a></li>
-                    <li><a href="https://cupboard.daftgames.net/32blit/?view=grid&sort=title&device=picosystem">DaftGames auto-builds: PicoSystem</a></li>
-                    <li><a href="https://cupboard.daftgames.net/32blit/?view=grid&sort=title&device=32blit">DaftGames auto-builds: 32blit</a></li>
+                    <li><a href="https://cupboard.daftgames.net/32blit/?view=grid&sort=title&device=picosystem">DaftGames auto-builds (PicoSystem)</a></li>
+                    <li><a href="https://cupboard.daftgames.net/32blit/?view=grid&sort=title&device=32blit">DaftGames auto-builds (32blit)</a></li>
+                    <li><a href="https://32blit.github.io/32blit-sdk/examples/">Playable examples (web)</a></li>
                 </ul>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h2>What is 32blit?</h2>
-                <p>32blit is a set of tools and software to help you build games for embedded devices.</p>
-                <p>It was originally developed for its namesake- the STM32-based 32blit console.</p>
             </article>
             <article>
                 <h2>Community</h2>
                 <p>Join the 32blit community on Discord- <a href="https://discord.gg/JuHAvACrDG">https://discord.gg/JuHAvACrDG</a></a></p>
+            </article>
+        </section>
+        <section class="games">
+            <article>
+                <h2>Blockgame</h2>
+                <img src="blockgame.png">
+                <p>A game about blocks.</p>
+                <p><a href="https://blithub.co.uk/blits/ali1234/blockgame">Download Blockgame from blithub</a></p>
+            </article>
+            <article>
+                <h2>Gate Keeper</h2>
+                <img src="gate-keeper.bmp">
+                <p>A short and sweet 30 minute RPG.</p>
+                <p><a href="https://blithub.co.uk/blits/Blackhawk-TA/gate-keeper">Download Gate Keeper from blithub</a></p>
+            </article>
+            <article>
+                <h2>Free-Red</h2>
+                <img src="free-red.bmp">
+                <p>Free the red block by sliding the others out of its way.</p>
+                <p><a href="https://blithub.co.uk/blits/lummi01/free-red">Download Free-Red from blithub</a></p>
             </article>
         </section>
     </main>
