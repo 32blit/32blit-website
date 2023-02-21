@@ -12,12 +12,20 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <style type="text/css">
         body {
+            font-family: Roboto;
+            margin: 0;
+            padding: 0;
             max-width: 1000px;
             margin: 20px;
-            font-family: Roboto;
         }
-        h1, h2, h3, h4, h5, h6 {
+        h1, h3, h3, h4, h5, h6 {
             font-family: Montserrat;
+        }
+        h2 {
+            color:#222;
+            font-size: 2em;
+            padding: 0;
+            margin:60px 0 0 0;
         }
         header {
             display: grid;
@@ -64,26 +72,30 @@
         a, a:hover {color:#a35;}
         a:visited {color:#639;}
 
-        .intro article:nth-child(1) h2 {background: #a35;}
-        .intro article:nth-child(2) h2 {background: #4d8;}
-        .intro article:nth-child(3) h2 {background: #639;}
-
-        .links article:nth-child(1) h2 {background: #817;}
-        .links article:nth-child(2) h2 {background: #9d5;}
-        .links article:nth-child(3) h2 {background: #36b;}
-
-        .games article:nth-child(1) h2 {background: #e94;}
-        .games article:nth-child(2) h2 {background: #2cb;}
-        .games article:nth-child(3) h2 {background: #c66;}
-
-        h2 {
+        h3 {
             display: inline-block;
+            background: #333;
             color: #fff;
             transform: rotate(-2deg);
             line-height:200%;
             padding: 0 1em;
             margin:-20px 10px 5px -10px;
+            font-size: 1.5em;
+            white-space: pre;
         }
+
+        .intro article:nth-child(1) h3 {background: #a35;}
+        .intro article:nth-child(2) h3 {background: #4d8;}
+        .intro article:nth-child(3) h3 {background: #639;}
+
+        .links article:nth-child(1) h3 {background: #817;}
+        .links article:nth-child(2) h3 {background: #9d5;}
+        .links article:nth-child(3) h3 {background: #36b;}
+
+        .games article:nth-child(1) h3 {background: #e94;}
+        .games article:nth-child(2) h3 {background: #2cb;}
+        .games article:nth-child(3) h3 {background: #c66;}
+
         p {
             margin: 10px 20px;
         }
@@ -95,6 +107,9 @@
         @media only screen and (min-width: 1000px) {
             body {
                 margin: 20px auto;
+            }
+            h2 span {
+                margin: 0 auto;
             }
             section {
                 grid-template-columns: 1fr 1fr 1fr;
@@ -124,12 +139,12 @@
     <main>
         <section class="intro">
             <article>
-                <h2>What is 32blit?</h2>
+                <h3>What is 32blit?</h3>
                 <p>32blit is a set of tools and software to help you build games for embedded devices.</p>
                 <p>It was originally developed for its namesake- the STM32-based 32blit console - and has since been ported to the Raspberry Pi Pico, including the <a href="https://shop.pimoroni.com/products/picosystem">Pimoroni PicoSystem</a>.</p>
             </article>
             <article>
-                <h2>32blit SDK</h2>
+                <h3>32blit SDK</h3>
                 <ul>
                     <li><a href="https://github.com/32blit/32blit-sdk/releases/latest">Latest SDK Release</a></li>
                     <li><a href="https://github.com/32blit/32blit-sdk/">Source @ GitHUb</a></li>
@@ -138,13 +153,13 @@
         </section>
         <section class="links">
             <article>
-                <h2>Documentation</h2>
+                <h3>Documentation</h3>
                 <ul>
                     <li><a href="https://github.com/32blit/32blit-sdk/tree/master/docs#32blit-sdk">SDK Documentation</a></li>
                 </ul>
             </article>
             <article>
-                <h2>Games</h2>
+                <h3>Games</h3>
                 <ul>
                     <li><a href="https://blithub.co.uk/">Blithub (for 32blit hardware)</a></li>
                     <li><a href="https://cupboard.daftgames.net/32blit/?view=grid&sort=title&device=picosystem">DaftGames auto-builds (PicoSystem)</a></li>
@@ -153,25 +168,52 @@
                 </ul>
             </article>
             <article>
-                <h2>Community</h2>
+                <h3>Community</h3>
                 <p>Join the 32blit community on Discord- <a href="https://discord.gg/JuHAvACrDG">https://discord.gg/JuHAvACrDG</a></a></p>
             </article>
         </section>
+        <h2>Tutorials</h2>
+        <section class="tutorials">
+            <article>
+                <h3>Getting Started</h3>
+                <ul>
+                    <li>Quick Start</li>
+                    <li>Your First Game</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Writing Code</h3>
+                <ul>
+                    <li>Haptic Feedback</li>
+                    <li>Menus</li>
+                    <li>Vectors</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Sharing Your Game</h3>
+                <ul>
+                    <li>Build for all platforms</li>
+                    <li>Share on Blithub</li>
+                    <li>Sell on Itch.io</li>
+                </ul>
+            </article>
+        </section>
+        <h2>Featured</h2>
         <section class="games">
             <article>
-                <h2>Blockgame</h2>
+                <h3>Blockgame</h3>
                 <img src="blockgame.png">
                 <p>A game about blocks.</p>
                 <p><a href="https://blithub.co.uk/blits/ali1234/blockgame">Download Blockgame from blithub</a></p>
             </article>
             <article>
-                <h2>Gate Keeper</h2>
+                <h3>Gate Keeper</h3>
                 <img src="gate-keeper.bmp">
                 <p>A short and sweet 30 minute RPG.</p>
                 <p><a href="https://blithub.co.uk/blits/Blackhawk-TA/gate-keeper">Download Gate Keeper from blithub</a></p>
             </article>
             <article>
-                <h2>Free-Red</h2>
+                <h3>Free-Red</h3>
                 <img src="free-red.bmp">
                 <p>Free the red block by sliding the others out of its way.</p>
                 <p><a href="https://blithub.co.uk/blits/lummi01/free-red">Download Free-Red from blithub</a></p>
