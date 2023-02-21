@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <title>32blit - the embedded game development SDK</title>
+    <meta name="description" content="32blit - the embedded game development SDK" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <style type="text/css">
+        body {
+            max-width: 900px;
+            margin: 20px;
+            font-family: Roboto;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Montserrat;
+        }
+        header {
+            display: grid;
+	        grid-template-columns: 1fr 2fr;
+	        grid-template-rows: auto;
+            column-gap: 20px;
+        }
+        h1 {
+            font-size:1.4em;
+            padding: 0.5em;
+            line-height: 1.8em;
+            background: #36b;
+            color:#fff;
+            display: inline;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            position: relative;
+            top: 5px;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        section {
+            display: grid;
+            grid-template-rows: auto;
+            column-gap: 20px;
+        }
+        @media only screen and (min-width: 900px) {
+            body {
+                margin: 20px auto;
+            }
+            header {
+	            grid-template-columns: 1fr 2fr 3fr;
+            }
+            section:nth-child(1) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            section:nth-child(2) {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        article {
+            margin-top: 40px;
+            background: #eee;
+            padding-bottom: 10px;
+        }
+        section:nth-child(1) article:nth-child(1) h2 {
+            background: #a35;
+        }
+        section:nth-child(1) article:nth-child(2) h2 {
+            background: #4d8;
+        }
+        section:nth-child(1) article:nth-child(3) h2 {
+            background: #639;
+        }
+        section:nth-child(2) article:nth-child(1) h2 {
+            background: #817;
+        }
+        section:nth-child(2) article:nth-child(2) h2 {
+            background: #9d5;
+        }
+        section:nth-child(2) article:nth-child(3) h2 {
+            background: #36b;
+        }
+        h2 {
+            display: inline-block;
+            color: #fff;
+            transform: rotate(-2deg);
+            line-height:200%;
+            padding: 0 1em;
+            margin:-20px 10px 5px -10px;
+        }
+        p {
+            margin: 10px 20px;
+        }
+        footer {
+            text-align: center;
+            padding:20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="32blit">
+        <span>
+        <h1>the embedded game development SDK</h1>
+        </span>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>32blit SDK</h2>
+                <ul>
+                    <li><a href="https://github.com/32blit/32blit-sdk/releases/latest">Latest SDK Release</a></li>
+                    <li><a href="https://github.com/32blit/32blit-sdk/">Source @ GitHUb</a></li>
+                </ul>
+            </article>
+            <article>
+                <h2>Documentation</h2>
+                <ul>
+                    <li><a href="https://github.com/32blit/32blit-sdk/tree/master/docs#32blit-sdk">SDK Documentation</a></li>
+                </ul>
+            </article>
+            <article>
+                <h2>Games</h2>
+                <ul>
+                    <li><a href="https://blithub.co.uk/">Blithub (for 32blit hardware)</a></li>
+                    <li><a href="https://cupboard.daftgames.net/32blit/?view=grid&sort=title&device=picosystem">DaftGames auto-builds: PicoSystem</a></li>
+                    <li><a href="https://cupboard.daftgames.net/32blit/?view=grid&sort=title&device=32blit">DaftGames auto-builds: 32blit</a></li>
+                </ul>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>What is 32blit?</h2>
+                <p>32blit is a set of tools and software to help you build games for embedded devices.</p>
+                <p>It was originally developed for its namesake- the STM32-based 32blit console.</p>
+            </article>
+            <article>
+                <h2>Community</h2>
+                <p>Join the 32blit community on Discord- <a href="https://discord.gg/JuHAvACrDG">https://discord.gg/JuHAvACrDG</a></a></p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright  &copy; 32blit 2023</p>
+        <p></p>
+    </footer>
+</body>
+</html>
