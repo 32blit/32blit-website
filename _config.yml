@@ -56,3 +56,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - "*.sublime-*"
+  - community-tutorials-sub/

@@ -1,0 +1,29 @@
+{% capture _ %}{% increment include_count %}{% endcapture %}
+{% assign theindex = include_count %}
+
+<div class="tabbed">
+  {% for tab in include %}
+  <input type="radio" id="tab{{ theindex }}{{ forloop.index }}" 
+         name="css-tabs{{ theindex }}"
+         {% if forloop.first %}checked{% endif %}>
+  {% endfor %}
+
+  <ul class="tabs">
+    {% for tab in include %}
+    <li class="tab">
+      <label for="tab{{ theindex }}{{ forloop.index }}">
+        {{ tab[0]|replace: "__CPP", " (C++)"
+                 |replace: "__MP", " (MicroPython)"
+                 |replace: "__CMP", " (C++, MicroPython)"
+                 |replace: "_s_", "/" }}
+      </label>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% for tab in include %}
+  <div class="tab-content">
+    {{ tab[1]|markdownify }}
+  </div>
+  {% endfor %}
+</div>
