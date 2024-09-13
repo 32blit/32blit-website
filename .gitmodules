@@ -1,0 +1,3 @@
+[submodule "community-tutorials"]
+	path = community-tutorials
+	url = https://github.com/32blit/32blit-tutorials-contrib
